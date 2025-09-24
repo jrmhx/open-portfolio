@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jeremiah Xing",
+  title: "jrmh x",
   description: "Jeremiah Xing's Personal Page",
 };
 
