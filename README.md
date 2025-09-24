@@ -34,3 +34,72 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Structure Template
+
+```bash
+.
+├── app/                          # Next.js App Router (existing)
+│   ├── layout.tsx               # Root layout
+│   ├── page.tsx                 # Homepage
+│   ├── globals.css              # Global styles
+│   ├── profile/                 # Profile page route
+│   │   └── page.tsx
+│   ├── projects/                # Projects page route
+│   │   └── page.tsx
+│   └── about/                   # About page route
+│       └── page.tsx
+│
+├── components/                   # UI Layer
+│   ├── ui/                      # shadcn components (auto-generated)
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   └── ...
+│   └── common/                  # Shared custom components
+│       ├── header.tsx
+│       ├── footer.tsx
+│       └── navigation.tsx
+│
+├── features/                     # Feature Layer
+│   ├── profile/                 # Profile feature module
+│   │   ├── components/          # Feature-specific components
+│   │   ├── hooks/              # Feature-specific hooks
+│   │   └── index.ts            # Feature exports
+│   ├── projects/               # Projects feature module
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   └── index.ts
+│   └── about/                  # About feature module
+│       ├── components/
+│       ├── hooks/
+│       └── index.ts
+│
+├── store/                       # Store Layer (Redux)
+│   ├── slices/                 # Redux slices
+│   │   ├── profileSlice.ts
+│   │   ├── projectsSlice.ts
+│   │   └── uiSlice.ts
+│   ├── providers.tsx           # Redux providers
+│   ├── index.ts               # Store configuration
+│   └── types.ts               # Redux types
+│
+├── lib/                        # Data Layer & Utils (existing)
+│   ├── repositories/           # Repository pattern for data
+│   │   ├── profileRepository.ts
+│   │   ├── projectsRepository.ts
+│   │   └── baseRepository.ts
+│   ├── services/              # Business services
+│   │   └── apiService.ts
+│   ├── types/                 # Shared TypeScript types
+│   │   └── index.ts
+│   └── utils.ts              # Utility functions (existing)
+│
+├── public/                     # Static assets (existing)
+├── components.json             # shadcn config (existing)
+├── globals.d.ts               # Type declarations (existing)
+├── package.json               # Dependencies (existing)
+├── tsconfig.json             # TypeScript config (existing)
+└── ...config files
+```
