@@ -54,7 +54,7 @@ export function MainNav() {
             className="flex-shrink-0"
           >
             <h1 className="text-4xl  bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              ❁
+              Open Portfolio
             </h1>
           </motion.div>
 
