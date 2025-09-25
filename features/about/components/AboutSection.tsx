@@ -82,7 +82,7 @@ export function AboutSection() {
                 </Card>
               </motion.div>
 
-              {/* Key Stats */}
+              {/* key stats */}
               {/* <motion.div variants={itemVariants}>
                 <Card>
                   <CardHeader>
@@ -125,7 +125,7 @@ export function AboutSection() {
                       <CardTitle>Recent Experience</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      {experience.slice(0, 3).map((exp, index) => (
+                      {experience.slice(0, 4).map((exp, index) => (
                         <div key={index} className="border-l-2 border-blue-200 dark:border-blue-800 pl-4">
                           <div className="font-semibold text-gray-900 dark:text-gray-100">
                             {exp.title}
@@ -153,7 +153,7 @@ export function AboutSection() {
                     <CardTitle>Core Skills</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    {skills?.map((skill, index) => (
+                    {skills?.slice(0, 7).map((skill, index) => (
                       <div key={skill.name}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">

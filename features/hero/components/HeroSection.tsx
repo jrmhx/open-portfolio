@@ -37,6 +37,10 @@ export function HeroSection() {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const scrollToAbout = () => {
+    document.querySelector('#about')?.scrollIntoView({behavior: 'smooth'})
+  }
+
   const handleDownloadCV = () => {
     if (profile?.resumeUrl) {
       window.open(profile.resumeUrl, '_blank')
@@ -163,6 +167,7 @@ export function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          onClick={scrollToAbout}
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}

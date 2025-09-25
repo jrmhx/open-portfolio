@@ -5,13 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -40,7 +34,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ```bash
 .
-├── app/                          # Next.js App Router (existing)
+├── app/                          # Next.js App Router 
 │   ├── layout.tsx               # Root layout
 │   ├── page.tsx                 # Homepage
 │   ├── globals.css              # Global styles
@@ -52,7 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │       └── page.tsx
 │
 ├── components/                   # UI Layer
-│   ├── ui/                      # shadcn components (auto-generated)
+│   ├── ui/                      # shadcn components (shadcn auto-generated)
 │   │   ├── button.tsx
 │   │   ├── card.tsx
 │   │   ├── input.tsx
@@ -85,7 +79,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │   ├── index.ts               # Store configuration
 │   └── types.ts               # Redux types
 │
-├── lib/                        # Data Layer & Utils (existing)
+├── lib/                        # Data Layer & Utils 
 │   ├── repositories/           # Repository pattern for data
 │   │   ├── profileRepository.ts
 │   │   ├── projectsRepository.ts
@@ -94,12 +88,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 │   │   └── apiService.ts
 │   ├── types/                 # Shared TypeScript types
 │   │   └── index.ts
-│   └── utils.ts              # Utility functions (existing)
+│   └── utils.ts              # Utility functions 
 │
-├── public/                     # Static assets (existing)
-├── components.json             # shadcn config (existing)
-├── globals.d.ts               # Type declarations (existing)
-├── package.json               # Dependencies (existing)
-├── tsconfig.json             # TypeScript config (existing)
+├── public/                     # Static assets 
+├── components.json             # shadcn config 
+├── globals.d.ts               # Type declarations 
+├── package.json               # Dependencies 
+├── tsconfig.json             # TypeScript config 
 └── ...config files
 ```

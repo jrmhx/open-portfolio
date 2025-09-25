@@ -5,6 +5,9 @@ import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useAppSelector } from '@/store/types'
 import { useState, useEffect } from 'react'
+import { repositoryService } from '@/lib/repositories'
+
+const profile = repositoryService.profile;
 
 export function Footer() {
   const profile = useAppSelector((state) => state.profile.data)
@@ -42,9 +45,9 @@ export function Footer() {
           {/* logo */}
           <div className="text-center">
             <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              John Doe
+              {profile?.name}
             </h3>
-            <p className="text-gray-400 mt-2">Senior Pro Life Engineer</p>
+            <p className="text-gray-400 mt-2">{profile?.title}</p>
           </div>
 
           {/* socials */}

@@ -2,7 +2,7 @@ import type { Profile } from '@/lib/types'
 
 export const profileData: Profile = {
   id: 'me-001',
-  name: 'John Doe',
+  name: 'Ophie Folio',
   title: 'Senior Pro Life Engineer',
   bio: 'I build things.',
   detailedBio: `With over 99 years of experience in full-stack development, I specialize in building 
