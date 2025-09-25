@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { repositoryService } from '@/lib/repositories'
 import type { Profile, DataState } from '@/lib/types'
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { LoadingSpinner } from '@/components/common/LoadingStates'
 import { useAppSelector } from '@/store/types'
@@ -153,7 +152,7 @@ export function AboutSection() {
                     <CardTitle>Core Skills</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
-                    {skills?.slice(0, 7).map((skill, index) => (
+                    {skills?.slice(0, 7).map((skill) => (
                       <div key={skill.name}>
                         <div className="flex justify-between items-center mb-2">
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">

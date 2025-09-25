@@ -5,9 +5,6 @@ import { IconFactory } from '@/components/common/icons'
 import { Button } from '@/components/ui/button'
 import { useAppSelector } from '@/store/types'
 import { useState, useEffect } from 'react'
-import { repositoryService } from '@/lib/repositories'
-
-const profile = repositoryService.profile;
 
 export function Footer() {
   const profile = useAppSelector((state) => state.profile.data)

@@ -7,10 +7,11 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
-import { useAppSelector, useAppDispatch } from '@/store/types'
+import { useAppDispatch } from '@/store/types'
 import { setSelectedProject } from '@/store/slices/projectsSlice'
 import type { Project } from '@/lib/types'
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 interface ProjectCardProps {
   project: Project
@@ -106,7 +107,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   {projectImages.map((image, imgIndex) => (
                     <motion.div
                       key={imgIndex}
-                      className="min-w-full h-full flex-shrink-0"
+                      className="min-w-full h-full flex-shrink-0 relative"
                       initial={{ opacity: 0.7 }}
                       animate={{ 
                         opacity: imgIndex === currentImageIndex ? 1 : 0.7,
@@ -114,11 +115,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <img 
+                      <Image 
                         src={image}
+                        fill
                         alt={`${project.title} - Image ${imgIndex + 1}`}
-                        className="w-full h-full object-cover select-none"
+                        className="object-cover select-none"
                         draggable={false}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </motion.div>
                   ))}
@@ -236,10 +239,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                       </div>
                     ) : (
                       <div className="relative w-full h-full group/modal">
-                        <img 
+                        <Image
                           src={projectImages[currentImageIndex]} 
+                          fill
                           alt={`${project.title} - Image ${currentImageIndex + 1}`}
-                          className="w-full h-full object-cover rounded-lg"
+                          className="object-cover rounded-lg"
+                          sizes="(max-width: 768px) 100vw, 66vw"
                         />
                         
                         {/* Image indicators for modal */}

@@ -50,7 +50,7 @@ export abstract class BaseRepository {
     }
   }
 
-  // simulate random failures (for testing error handling)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected shouldSimulateError(errorRate: number = 0): boolean {
     //return Math.random() < errorRate
     return false;

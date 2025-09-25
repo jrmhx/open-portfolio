@@ -26,7 +26,7 @@ const iconVariants = cva(
 interface IconProps extends VariantProps<typeof iconVariants> {
   name: IconMapKey | keyof typeof LucideIcons
   className?: string
-  [key: string]: any // For any other lucide icon props like strokeWidth, color, etc.
+  [key: string]: any // For any other lucide icon props like strokeWidth, color, etc. 
 }
 
 // Helper function to safely get icon from map
