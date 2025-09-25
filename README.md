@@ -14,8 +14,8 @@ All the data is stored in the `/lib` folder using a repository pattern. Update y
 
 - update data in `/lib/data/`
 - update types in `/lib/types/`
-- update repository logic in `/lib/repositories/`
+- update slices in `/store/slices/`
 
 
 
-Will add AI features soon...
+Plan to add AI features in the future...

@@ -5,23 +5,12 @@ import { HeroSection } from "@/features/hero"
 import { ProjectsGrid } from "@/features/projects"
 import { AboutSection } from "@/features/about"
 import { Footer } from "@/components/common/Footer"
-import { PageLoadingState } from "@/components/common/LoadingStates"
-import { useDataInitialization } from "@/lib/hooks/useDataInitialization"
 import { useAppSelector } from "@/store/types"
-import { selectIsProfileLoading, selectProfileError } from "@/store/slices/profileSlice"
+import { selectProfileError } from "@/store/slices/profileSlice"
 
 export default function Home() {
-  useDataInitialization()
-
-  // check loading states
-  const isProfileLoading = useAppSelector(selectIsProfileLoading)
+  // With static data, no initialization needed
   const profileError = useAppSelector(selectProfileError)
-
-  const isInitialLoading = isProfileLoading
-
-  if (isInitialLoading) {
-    return <PageLoadingState />
-  }
 
   if (profileError) {
     return (
