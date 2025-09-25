@@ -102,6 +102,29 @@ export const projectsData: Project[] = [
       'Designed and integrated a cache with LRU and LFU replacement policies for efficient resource management.',
       'Improved browsing performance by achieving up to 138x speedup on cache hits, including multimedia files.'
     ]
+  },
+  {
+    id: 'advection-solver',
+    title: 'Advection Solver',
+    description: 'A parallel advection solver implemented with OpenMP for CPU and CUDA for GPU acceleration.',
+    longDescription: `Built a high-performance advection solver for shared memory architectures, supporting both OpenMP and CUDA implementations. Used domain decomposition, tunable grid/block configurations, and performance optimizations to minimize cache misses and synchronization overhead.`,
+    images: [
+      '/images/hpc/hpc.gif'
+    ],
+    technologies: ['C', 'CUDA', 'OpenMP', 'Parallel Computing', 'Performance Optimization'],
+    githubUrl: 'https://github.com/jrmhx/advection-solver',
+    liveUrl: '',
+    featured: false,
+    category: 'HPC',
+    status: 'completed',
+    startDate: '',
+    endDate: '',
+    highlights: [
+      'Developed parallel CPU implementation with OpenMP, leveraging 1D/2D decomposition and loop optimizations.',
+      'Implemented GPU kernels with CUDA, allowing block/grid tuning and optimized memory access patterns.',
+      'Compared performance versus serial implementation to evaluate speedups and tradeoffs between CPU and GPU versions.',
+      'Applied optimization techniques to reduce synchronization and improve cache coherence in both CPU and GPU paths.'
+    ]
   }
 ]
 
