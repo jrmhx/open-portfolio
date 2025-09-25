@@ -3,24 +3,24 @@ import type { Education } from '@/lib/types'
 export const educationData: Education[] = [
   {
     id: 'edu-bachelor-2',
-    institution: 'Australian National University',
-    location: 'Canberra, Australia',
-    degree: 'Bachelor of Advanced Computing (Honours)',
-    field: 'System and Architecture',
-    startDate: '2022-06',
-    endDate: '2024-07',
+    institution: 'University of California',
+    location: 'Berkeley, CA',
+    degree: 'Master of Science',
+    field: 'Computer System',
+    startDate: '2022-12',
+    endDate: '2024-12',
     achievements: [
       
     ]
   },
   {
     id: 'edu-bachelor-1',
-    institution: 'Shandong University',
-    location: 'Shandong, China',
+    institution: 'University of Waterloo',
+    location: 'Ontario, Canada',
     degree: 'Bachelor of Science',
-    field: 'Computer Science and Technology',
-    startDate: '2020-09',
-    endDate: '2024-12',
+    field: 'Computer Science',
+    startDate: '2018-09',
+    endDate: '2022-09',
     achievements: [
       
     ]

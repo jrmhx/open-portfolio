@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jeremiah Xing",
-  description: "Jeremiah's Personal Page",
+  title: "Open Portfolio",
+  description: "Open Portfolio Created by Jeremiah Xing",
 };
 
 export default function RootLayout({
