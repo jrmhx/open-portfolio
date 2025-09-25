@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { IconFactory } from '@/components/common/icons'
 import { ArrowRight, Download, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
@@ -154,8 +155,10 @@ export function HeroSection() {
                 title={link.label || link.platform}
               >
                 <span className="sr-only">{link.platform}</span>
-                {/* TODO: replace these with actual icons */}
-                <div className="w-6 h-6 bg-current rounded"></div>
+                <IconFactory 
+                  name={link.icon.toLocaleLowerCase() as any}
+                  className="w-6 h-6 rounded"
+                />
               </motion.a>
             ))}
           </motion.div>
@@ -174,7 +177,7 @@ export function HeroSection() {
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center"
           >
-            <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"></div>
+            <div className="w-1 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 "></div>
           </motion.div>
         </motion.div>
       </div>

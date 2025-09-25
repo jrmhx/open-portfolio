@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Twitter, ArrowUp } from 'lucide-react'
+import { IconFactory } from '@/components/common/icons'
 import { Button } from '@/components/ui/button'
 import { useAppSelector } from '@/store/types'
 import { useState, useEffect } from 'react'
@@ -26,13 +26,6 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-    github: Github,
-    linkedin: Linkedin,
-    twitter: Twitter,
-    mail: Mail
-  }
-
   return (
     <motion.footer
       initial={{ opacity: 0 }}
@@ -53,7 +46,7 @@ export function Footer() {
           {/* socials */}
           <div className="flex space-x-6">
             {profile?.socialLinks.map((link) => {
-              const IconComponent = iconMap[link.icon.toLowerCase()] || Github
+              
               return (
                 <motion.a
                   key={link.platform}
@@ -63,7 +56,10 @@ export function Footer() {
                   className="text-gray-400 hover:text-white transition-colors"
                   whileHover={{ scale: 1.2, y: -2 }}
                 >
-                  <IconComponent className="h-6 w-6" />
+                  <IconFactory 
+                    name={link.icon.toLowerCase() as any} 
+                    className="h-6 w-6" 
+                  />
                   <span className="sr-only">{link.platform}</span>
                 </motion.a>
               )
@@ -91,7 +87,7 @@ export function Footer() {
             size="icon"
             className="rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg"
           >
-            <ArrowUp className="h-4 w-4" />
+            <IconFactory name='arrow-up'/>
           </Button>
         </motion.div>
       )}
