@@ -6,8 +6,13 @@ import TwitterLogo from './customized/TwitterLogo'
 import LinkedinLogo from './customized/LinkedinLogo'
 import InstagramLogo from './customized/InstagramLogo'
 import FacebookLogo from './customized/FacebookLogo'
+import MainLogo from './customized/MainLogo'
+import NameLogo from './customized/NameLogo'
 
 export const IconMap = {
+  'main': MainLogo,
+  'name': NameLogo,
+
   // Social Icons
   'github': GithubLogo,
   'linkedin': LinkedinLogo,

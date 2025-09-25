@@ -15,6 +15,9 @@ import {
   fetchSkills,
   fetchFeaturedSkills
 } from '@/store/slices/experienceSlice'
+import {
+  fetchEducation
+} from '@/store/slices/educationSlice'
 
 /**
  * hook to initialize all application data on startup
@@ -36,7 +39,8 @@ export function useDataInitialization() {
           dispatch(fetchProjectCategories()),
           dispatch(fetchExperience()),
           dispatch(fetchSkills()),
-          dispatch(fetchFeaturedSkills(4))
+          dispatch(fetchFeaturedSkills(4)),
+          dispatch(fetchEducation())
         ])
 
         console.log('✅ All application data initialized successfully')

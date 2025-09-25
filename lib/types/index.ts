@@ -31,9 +31,10 @@ export interface Profile {
 export interface Skill {
   id: string
   name: string
-  category: 'frontend' | 'backend' | 'database' | 'devops' | 'mobile' | 'other'
+  category:  'backend' | 'database' | 'cloud' | 'mobile' | 'system' | 'frontend' | 'others'
   proficiency: 1 | 2 | 3 | 4 | 5 // 1=beginner, 5=expert
   yearsOfExperience?: number
+  icon?: string
 }
 
 export interface Achievement {
@@ -77,6 +78,7 @@ export interface Project {
 export interface Education {
   id: string
   institution: string
+  location: string
   degree: string
   field: string
   startDate: string

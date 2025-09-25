@@ -4,6 +4,7 @@
 export { profileData } from './profile'
 export { skillsData, getSkillsByCategory, getFeaturedSkills } from './skills'
 export { experienceData, getCurrentExperience, getExperienceByType, getTotalYearsOfExperience } from './experience'
+export { educationData } from './education'
 export { 
   projectsData, 
   getFeaturedProjects, 
@@ -16,6 +17,7 @@ export {
 // - profile.ts: Personal information, contact details, social links
 // - skills.ts: Technical skills and proficiencies
 // - experience.ts: Work experience, achievements, and career history
+// - education.ts: Academic background, degrees, and achievements
 // - projects.ts: Portfolio projects, descriptions, and links
 
 // All changes will automatically reflect across the entire application!

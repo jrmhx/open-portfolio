@@ -5,16 +5,19 @@ export { BaseRepository } from './BaseRepository'
 export { ProfileRepository } from './ProfileRepository'
 export { ProjectsRepository } from './ProjectsRepository'
 export { ExperienceRepository, SkillsRepository } from './ExperienceRepository'
+export { EducationRepository } from './EducationRepository'
 
 import { ProfileRepository } from './ProfileRepository'
 import { ProjectsRepository } from './ProjectsRepository'
 import { ExperienceRepository, SkillsRepository } from './ExperienceRepository'
+import { EducationRepository } from './EducationRepository'
 
 // create singleton instances for use throughout the app
 export const profileRepository = new ProfileRepository()
 export const projectsRepository = new ProjectsRepository()
 export const experienceRepository = new ExperienceRepository()
 export const skillsRepository = new SkillsRepository()
+export const educationRepository = new EducationRepository()
 
 // repository service aggregator
 export class RepositoryService {
@@ -22,6 +25,7 @@ export class RepositoryService {
   projects = projectsRepository
   experience = experienceRepository
   skills = skillsRepository
+  education = educationRepository
 }
 
 // single instance for the entire app

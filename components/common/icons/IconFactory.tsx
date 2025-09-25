@@ -14,7 +14,8 @@ const iconVariants = cva(
         md: "w-5 h-5",
         lg: "w-6 h-6",
         xl: "w-8 h-8",
-        "2xl": "w-10 h-10"
+        "2xl": "w-10 h-10",
+        "3xl": "w-15 h-15"
       }
     },
     defaultVariants: {

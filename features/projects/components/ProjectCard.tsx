@@ -217,7 +217,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           
           {/* overlay with quick actions */}
           <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
-            <Dialog>
+            <Dialog >
               <DialogTrigger asChild>
                 <Button
                   size="icon"
@@ -227,7 +227,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                   <Eye className="h-4 w-4" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="max-w-2xl">
+              <DialogContent className="max-w-[95vw] max-h-[95vh] w-[95vw]">
                 <DialogHeader>
                   <DialogTitle>{project.title}</DialogTitle>
                 </DialogHeader>

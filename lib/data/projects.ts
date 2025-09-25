@@ -2,80 +2,105 @@ import type { Project } from '@/lib/types'
 
 export const projectsData: Project[] = [
   {
-  id: 'open-portfolio',
-  title: 'Open Portfolio Template',
-  description: 'This is what you currently looking at.',
-  longDescription: `An open-source personal portfolio template designed for developers, designers, and professionals.
-    
-    Built with the latest web technologies including Next.js, Redux Toolkit, Framer Motion, and shadcn/ui components.
-    Includes a companion AI-powered resume parser (separate Go project) that can automatically generate portfolio data from resumes.`,
-  technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion'],
-  githubUrl: 'https://github.com/jrmhx/open-portfolio',
-  liveUrl: 'https://theopenportfolio.vercel.app',
-  featured: true,
-  category: 'Frontend',
-  status: 'in-progress',
-  startDate: '2025-09',
-  endDate: '2025-09',
-  highlights: [
-    'Modern React patterns with TypeScript and Redux Toolkit',
-    'Flexible icon system supporting Lucide icons and custom SVGs',
-    'Responsive design with dark/light mode support',
-    'Companion AI resume parser for automated data generation',
-    'Clean, maintainable architecture perfect for customization',
-    'Open-source template for the developer community'
-  ]
-},
-  {
-    id: 'ai-gf-bf',
-    title: 'AI Girlfriend',
-    description: 'An AI powered virtual girlfriend!',
-    longDescription: `An AI powered virtual girlfriend!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      
-      Features include smart categorization, deadline predictions, workload balancing, and integration 
-      with popular calendar applications.`,
+    id: 'cpp-database',
+    title: 'Bustub Database Engine',
+    description: 'a disk orientated relational db engine writen in c++17',
+    longDescription: `Built a C++ relational database system, 
+    implementing core storage, indexing, SQL execution, and MVCC-based 
+    concurrency control with RAII design patterns and performance optimizations.
+    `,
     images: [
-      '/images/projects/ai-gf-1.jpg',
-      '/images/projects/ai-gf-2.jpg',
+      '/images/bustub/bustub-1.png'
     ],
-    technologies: ['AI', 'LLM', 'T2I-Adapter', 'T2V'],
-    githubUrl: 'https://github.com/jrmhx/open-portfolio',
-    liveUrl: 'https://www.google.com/search?q=ai+girlfriend',
-    featured: false,
-    category: 'AI',
+    technologies: ['C++', 'RAII', 'concurrency', 'MVCC', 'system-programming'],
+    githubUrl: 'https://github.com/jrmhx/bustub-db',
+    liveUrl: 'https://github.com/jrmhx/bustub-db',
+    featured: true,
+    category: 'System',
     status: 'completed',
-    startDate: '2024-01',
-    endDate: '2024-06',
+    startDate: '2025-04',
+    endDate: '2025-09',
     highlights: [
-      'Integrated OpenAI GPT-4 for intelligent task analysis',
-      'Built custom scheduling algorithm for optimal task distribution',
-      'Implemented real-time collaboration features',
-      'Achieved 95% user satisfaction in beta testing'
+      'Implemented buffer pool manager, B+ tree indexing, query execution engine, and transaction management in C++17.',
+      'Applied advanced design patterns RAII for resource safety, MVCC for concurrency control.',
+      'Developed SQL query processing pipeline (parsing, planning, optimization, execution) enabling support for joins, aggregation, and transactional queries.',
+      'Optimized system performance by designing efficient memory management, LRU-k cache page replacement policy.'
     ]
   },
   {
-    id: 'block-chain',
-    title: 'Crypto on Chain Analyzer with AI',
-    description: 'A comperhensive on chain realtime data analyser. With AI powered it even trades your cryto while you sleeping.',
-    longDescription: `A comperhensive on chain realtime data analyser. With AI powered it even trades your cryto while you sleeping across all broker and mainnet
-      
-      Really ALL IN NO SLEEP!!! Lets beat the whales!!!`,
+    id: 'py-ocml',
+    title: 'Machine Learning Platform for Ovarian Cancer Detection',
+    description: 'a self-hosted machine learning backend with web interface for early ovarian cancer detection',
+    longDescription: `Developed a self-hosted machine learning backend with a web interface, 
+    making advanced ML models for early detection of ovarian cancer accessible to medical professionals. 
+    Implemented an event-driven architecture with Flask, RabbitMQ, Celery.`,
     images: [
-      '/images/projects/ai-gf-crypto-1.jpg'
+      '/images/ocml/ocml.png'
     ],
-    technologies: ['Rust', 'Socket.io', 'WebRTC', 'PostgreSQL', 'Redis', 'AWS', 'K8s'],
-    githubUrl: 'https://github.com/jrmhx/open-portfolio',
-    liveUrl: 'https://www.google.com/search?q=quit+gambling',
+    technologies: ['Python', 'Xgboost', 'RabbitMQ', 'Celery', 'Pandas', 'Docker'],
+    githubUrl: '',
+    liveUrl: '',
     featured: false,
-    category: 'Blockchain',
+    category: 'AI/ML',
     status: 'completed',
-    startDate: '2023-08',
-    endDate: '2024-02',
+    startDate: '2024-03',
+    endDate: '2025-04',
     highlights: [
-      'Supports 100+ concurrent users in real-time editing',
-      'Built custom WebRTC solution for video conferencing',
-      'Implemented conflict resolution for collaborative editing',
-      'Reduced meeting coordination time by 60% for teams'
+      'Built a Flask-based backend with event-driven architecture using RabbitMQ for reliable asynchronous communication.',
+      'Implemented Celery for multithreaded task execution and efficient ML data processing pipelines with Pandas.',
+      'Developed a Next.js frontend to provide medical professionals with an accessible and intuitive web interface.',
+      'Deployed the entire system using Docker Compose for fully self-hosted, cloud-native deployment.'
+    ]
+  },
+  {
+    id: 'ts-open-portfolio',
+    title: 'Open Portfolio Template',
+    description: 'what you currently looking at',
+    longDescription: `An open-source personal portfolio template designed for developers, designers, and professionals.
+      
+      Built with the latest web technologies including Next.js, Redux Toolkit, Framer Motion, and shadcn/ui components.
+      Includes a companion AI-powered resume parser that can automatically generate portfolio data from resumes.`,
+    technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion'],
+    githubUrl: 'https://github.com/jrmhx/open-portfolio',
+    liveUrl: 'https://theopenportfolio.vercel.app',
+    featured: false,
+    category: 'Frontend',
+    status: 'in-progress',
+    startDate: '2025-09',
+    endDate: '2025-07',
+    images: [
+
+    ],
+    highlights: [
+      'Modern React patterns with TypeScript and Redux Toolkit',
+      'Clean, maintainable architecture perfect for customization',
+      'Open-source template for the developer community'
+    ]
+  },
+  {
+    id: 'c-web-proxy-cache',
+    title: 'Web Proxy with Cache',
+    description: 'a multithreaded HTTP web proxy with caching in C',
+    longDescription: `Implemented a multithreaded web proxy in C that handles HTTP requests 
+    from web browsers and forwards them to web servers. Built with Unix Socket APIs and TCP/IP 
+    for networking, POSIX Threads with producer-consumer pattern for concurrency, and a cache 
+    supporting LRU and LFU replacement policies. Achieved up to 138x browsing speedup on cache hits.`,
+    images: [
+
+    ],
+    technologies: ['C', 'Unix Sockets', 'TCP/IP', 'POSIX Threads', 'LRU', 'LFU'],
+    githubUrl: 'https://github.com/jrmhx/cache-proxy',
+    liveUrl: '',
+    featured: false,
+    category: 'System',
+    status: 'completed',
+    startDate: '2022-07',
+    endDate: '2022-11',
+    highlights: [
+      'Developed an HTTP web proxy in C using Unix Socket APIs and TCP/IP for client-server communication.',
+      'Implemented concurrency with POSIX Threads and the producer-consumer pattern for safe multithreading.',
+      'Designed and integrated a cache with LRU and LFU replacement policies for efficient resource management.',
+      'Improved browsing performance by achieving up to 138x speedup on cache hits, including multimedia files.'
     ]
   }
 ]

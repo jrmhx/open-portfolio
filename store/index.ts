@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import profileReducer from './slices/profileSlice'
 import projectsReducer from './slices/projectsSlice'
 import experienceReducer from './slices/experienceSlice'
+import educationReducer from './slices/educationSlice'
 import uiReducer from './slices/uiSlice'
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     profile: profileReducer,
     projects: projectsReducer,
     experience: experienceReducer,
+    education: educationReducer,
     ui: uiReducer
   },
   middleware: (getDefaultMiddleware) =>

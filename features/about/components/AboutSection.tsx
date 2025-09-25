@@ -6,15 +6,18 @@ import { LoadingSpinner } from '@/components/common/LoadingStates'
 import { useAppSelector } from '@/store/types'
 import { selectProfile, selectIsProfileLoading } from '@/store/slices/profileSlice'
 import { selectExperience, selectSkills, selectIsExperienceLoading } from '@/store/slices/experienceSlice'
+import { selectEducation, selectIsEducationLoading } from '@/store/slices/educationSlice'
 
 export function AboutSection() {
   const profile = useAppSelector(selectProfile)
   const experience = useAppSelector(selectExperience)
   const skills = useAppSelector(selectSkills)
+  const education = useAppSelector(selectEducation)
   const isProfileLoading = useAppSelector(selectIsProfileLoading)
   const isExperienceLoading = useAppSelector(selectIsExperienceLoading)
+  const isEducationLoading = useAppSelector(selectIsEducationLoading)
 
-  const isLoading = isProfileLoading || isExperienceLoading
+  const isLoading = isProfileLoading || isExperienceLoading || isEducationLoading
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -130,7 +133,18 @@ export function AboutSection() {
                             {exp.title}
                           </div>
                           <div className="text-sm text-blue-600 dark:text-blue-400 mb-1">
-                            {exp.company}
+                            {exp.companyUrl ? (
+                              <a 
+                                href={exp.companyUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="hover:underline transition-colors"
+                              >
+                                {exp.company}
+                              </a>
+                            ) : (
+                              exp.company
+                            )}
                           </div>
                           <div className="text-xs text-gray-500 dark:text-gray-400">
                             {exp.startDate} - {exp.endDate || 'Present'}
@@ -145,37 +159,77 @@ export function AboutSection() {
 
             {/* right column */}
             <div className="space-y-8">
+              {/* education */}
+              {education && education.length > 0 && (
+                <motion.div variants={itemVariants}>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Education</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      {education.slice(0, 3).map((edu, index) => (
+                        <div key={index} className="border-l-2 border-purple-200 dark:border-purple-800 pl-4">
+                          <div className="font-semibold text-gray-900 dark:text-gray-100">
+                            {edu.degree}
+                          </div>
+                          <div className="text-sm text-purple-600 dark:text-purple-400 mb-1">
+                            {edu.institution}
+                          </div>
+                          <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">
+                            {edu.field} • {edu.startDate} - {edu.endDate || 'Present'}
+                          </div>
+                          {edu.gpa && (
+                            <div className="text-xs text-green-600 dark:text-green-400">
+                              GPA: {edu.gpa}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )}
               {/* skills */}
               <motion.div variants={itemVariants}>
                 <Card>
                   <CardHeader>
                     <CardTitle>Core Skills</CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-6">
-                    {skills?.slice(0, 7).map((skill) => (
-                      <div key={skill.name}>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {skills && [...skills].sort((a, b) => a.category.localeCompare(b.category)).slice(0, 20).map((skill) => {
+                        const getSkillCategoryColors = (category: string) => {
+                          switch (category) {
+                            case 'frontend':
+                              return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 border border-blue-200 dark:border-blue-700'
+                            case 'backend':
+                              return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300 border border-green-200 dark:border-green-700'
+                            case 'database':
+                              return 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300 border border-purple-200 dark:border-purple-700'
+                            case 'cloud':
+                              return 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-300 border border-orange-200 dark:border-orange-700'
+                            case 'mobile':
+                              return 'bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-300 border border-pink-200 dark:border-pink-700'
+                            case 'system':
+                              return 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border border-red-200 dark:border-red-700'
+                            case 'others':
+                            default:
+                              return 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300 border border-gray-200 dark:border-gray-600'
+                          }
+                        }
+                        
+                        return (
+                          <motion.div
+                            key={skill.name}
+                            className={`px-3 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:scale-105 ${getSkillCategoryColors(skill.category)}`}
+                            whileHover={{ y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
                             {skill.name}
-                          </span>
-                          <span className="text-sm text-gray-500 dark:text-gray-400">
-                            {
-                              skill.proficiency === 5 ? 'Expert' :
-                              skill.proficiency === 4 ? 'Advanced' :
-                              skill.proficiency === 3 ? 'Intermediate' :
-                              skill.proficiency === 2 ? 'Novice' :
-                              'Beginner'
-                            }
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
-                          <div 
-                            className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-500"
-                            style={{ width: `${skill.proficiency * 20}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
+                          </motion.div>
+                        )
+                      })}
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
