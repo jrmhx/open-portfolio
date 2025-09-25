@@ -53,8 +53,8 @@ export function MainNav() {
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0"
           >
-            <h1 className="text-4xl  bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Open Portfolio
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              OpenPortfolio
             </h1>
           </motion.div>
 

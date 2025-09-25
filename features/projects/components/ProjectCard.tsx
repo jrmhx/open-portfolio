@@ -47,10 +47,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         transition={{ delay: index * 0.1 }}
       >
         <Card className="overflow-hidden">
-          <div 
-            className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 cursor-pointer"
-            onClick={handleMobileImageClick}
-          >
+          <div className="relative overflow-hidden">
+            <div 
+              className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 cursor-pointer"
+              onClick={handleMobileImageClick}
+            >
             {!projectImage ? (
               <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-gray-400 dark:text-gray-600">
                 {project.title.charAt(0)}
@@ -70,11 +71,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {project.featured && (
             <div className="absolute top-3 right-3">
-              <Badge variant="default" className="bg-yellow-500 hover:bg-yellow-600">
+              <Badge variant="default" className="bg-yellow-500">
                 Featured
               </Badge>
             </div>
           )}
+          </div>
 
           <CardContent className="p-6">
             <div className="space-y-3">
@@ -290,7 +292,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {project.featured && (
             <div className="absolute top-3 right-3">
-              <Badge variant="default" className="bg-yellow-500 hover:bg-yellow-600">
+              <Badge variant="default" className="bg-yellow-600 hover:bg-yellow-500">
                 Featured
               </Badge>
             </div>
