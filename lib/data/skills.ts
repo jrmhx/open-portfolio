@@ -39,14 +39,14 @@ export const skillsData: Skill[] = [
   {
     id: 'aws',
     name: 'AWS',
-    category: 'devops',
+    category: 'cloud',
     proficiency: 1,
     yearsOfExperience: 3
   },
   {
     id: 'piano',
     name: 'Piano',
-    category: 'devops',
+    category: 'others',
     proficiency: 5,
     yearsOfExperience: 10
   }
