@@ -2,31 +2,30 @@ import type { Project } from '@/lib/types'
 
 export const projectsData: Project[] = [
   {
-    id: 'open-portfolio',
-    title: 'Open Portfolio',
-    description: 'Comprehensive analytics platform for online stores with AI-powered insights',
-    longDescription: `A powerful analytics dashboard designed specifically for e-commerce businesses. 
-      Provides deep insights into customer behavior, sales patterns, inventory optimization, and 
-      marketing effectiveness.
-      
-      Features advanced data visualization, predictive analytics for inventory management, 
-      customer segmentation, and automated reporting.`,
-    image: '/images/projects/ecommerce-analytics.jpg',
-    technologies: ['Next.js', 'Redux', 'shadcn'],
-    githubUrl: 'https://github.com/',
-    liveUrl: 'about:blank',
-    featured: true,
-    category: 'Frontend',
-    status: 'completed',
-    startDate: '2023-03',
-    endDate: '2023-08',
-    highlights: [
-      'Processes over 1M data points daily',
-      'Increased sales conversion rates by 25% for clients',
-      'Built custom machine learning models for demand forecasting',
-      'Integrated with 15+ e-commerce platforms'
-    ]
-  },
+  id: 'open-portfolio',
+  title: 'Open Portfolio Template',
+  description: 'This is what you currently looking at.',
+  longDescription: `An open-source personal portfolio template designed for developers, designers, and professionals.
+    
+    Built with the latest web technologies including Next.js, Redux Toolkit, Framer Motion, and shadcn/ui components.
+    Includes a companion AI-powered resume parser (separate Go project) that can automatically generate portfolio data from resumes.`,
+  technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion'],
+  githubUrl: 'https://github.com/jrmhx/open-portfolio',
+  liveUrl: 'https://theopenportfolio.vercel.app',
+  featured: true,
+  category: 'Frontend',
+  status: 'in-progress',
+  startDate: '2025-09',
+  endDate: '2025-09',
+  highlights: [
+    'Modern React patterns with TypeScript and Redux Toolkit',
+    'Flexible icon system supporting Lucide icons and custom SVGs',
+    'Responsive design with dark/light mode support',
+    'Companion AI resume parser for automated data generation',
+    'Clean, maintainable architecture perfect for customization',
+    'Open-source template for the developer community'
+  ]
+},
   {
     id: 'ai-gf-bf',
     title: 'AI Girlfriend',
@@ -35,14 +34,12 @@ export const projectsData: Project[] = [
       
       Features include smart categorization, deadline predictions, workload balancing, and integration 
       with popular calendar applications.`,
-    image: '/images/projects/ai-task-manager.jpg',
     images: [
-      '/images/projects/ai-task-manager-1.jpg',
-      '/images/projects/ai-task-manager-2.jpg',
-      '/images/projects/ai-task-manager-3.jpg'
+      '/images/projects/ai-gf-1.jpg',
+      '/images/projects/ai-gf-2.jpg',
     ],
     technologies: ['AI', 'LLM', 'T2I-Adapter', 'T2V'],
-    githubUrl: 'https://github.com/',
+    githubUrl: 'https://github.com/jrmhx/open-portfolio',
     liveUrl: 'https://www.google.com/search?q=ai+girlfriend',
     featured: false,
     category: 'AI',
@@ -63,10 +60,12 @@ export const projectsData: Project[] = [
     longDescription: `A comperhensive on chain realtime data analyser. With AI powered it even trades your cryto while you sleeping across all broker and mainnet
       
       Really ALL IN NO SLEEP!!! Lets beat the whales!!!`,
-    image: '/images/projects/collaboration-platform.jpg',
+    images: [
+      '/images/projects/ai-gf-crypto-1.jpg'
+    ],
     technologies: ['Rust', 'Socket.io', 'WebRTC', 'PostgreSQL', 'Redis', 'AWS', 'K8s'],
-    githubUrl: 'https://github.com/',
-    liveUrl: 'https://www.forbes.com/health/mind/how-to-stop-gambling-expert-advice/',
+    githubUrl: 'https://github.com/jrmhx/open-portfolio',
+    liveUrl: 'https://www.google.com/search?q=quit+gambling',
     featured: false,
     category: 'Blockchain',
     status: 'completed',

@@ -3,8 +3,8 @@ import type { Profile } from '@/lib/types'
 export const profileData: Profile = {
   id: 'me-001',
   name: 'Ophie Folio',
-  title: 'Senior Pro Life Engineer',
-  bio: 'I build things.',
+  title: 'Open Portfolio',
+  bio: 'I am Open Portfolio.',
   detailedBio: `With over 99 years of experience in full-stack development, I specialize in building 
     scalable web applications using modern technologies. I'm passionate about clean code, 
     user experience, and staying up-to-date with the latest industry trends. 
@@ -14,7 +14,7 @@ export const profileData: Profile = {
     that make a real impact.`,
   avatar: '/images/profile-avatar.jpg', // add your actual image here
   contactInfo: {
-    email: 'johndoe@example.com',
+    email: 'i@jrmh.dev',
     phone: '+1 (555) 123-4567', 
     location: 'San Francisco, CA',
     timezone: 'Pacific Time (UTC-8)',
@@ -23,13 +23,13 @@ export const profileData: Profile = {
   socialLinks: [
     {
       platform: 'GitHub',
-      url: 'https://github.com/',
+      url: 'https://github.com/jrmhx/open-portfolio',
       icon: 'github',
       label: 'Check out my code'
     },
     {
       platform: 'LinkedIn',
-      url: 'https://linkedin.com/',
+      url: 'https://linkedin.com/in/',
       icon: 'linkedin',
       label: 'Connect professionally'
     },
@@ -41,11 +41,11 @@ export const profileData: Profile = {
     },
     {
       platform: 'Email',
-      url: 'mailto:johndoe@example.com',
+      url: 'mailto:i@jrmh.dev',
       icon: 'mail',
       label: 'Get in touch'
     }
   ],
-  resumeUrl: '/documents/resume.pdf',
+  resumeUrl: '/resume.pdf',
   status: 'available'
 }

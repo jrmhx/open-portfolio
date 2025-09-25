@@ -19,28 +19,28 @@ export const skillsData: Skill[] = [
     id: 'typescript',
     name: 'TypeScript',
     category: 'frontend',
-    proficiency: 4,
+    proficiency: 3,
     yearsOfExperience: 2
   },
   {
     id: 'postgresql',
     name: 'PostgreSQL',
     category: 'database',
-    proficiency: 4,
+    proficiency: 3,
     yearsOfExperience: 3
   },
   {
     id: 'react',
     name: 'React',
     category: 'frontend',
-    proficiency: 4,
+    proficiency: 2,
     yearsOfExperience: 2
   },
   {
     id: 'aws',
     name: 'AWS',
     category: 'devops',
-    proficiency: 4,
+    proficiency: 1,
     yearsOfExperience: 3
   },
   {

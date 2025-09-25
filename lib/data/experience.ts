@@ -5,7 +5,7 @@ export const experienceData: Experience[] = [
     id: 'vp',
     title: 'Corporate Vice President',
     company: 'Some Big Tech Inc.',
-    companyUrl: 'https://techinnovations.com',
+    companyUrl: 'https://github.com/jrmhx/open-portfolio',
     location: 'San Francisco, CA',
     startDate: '2024-09',
     // endDate: undefined, // Current position
@@ -37,7 +37,7 @@ export const experienceData: Experience[] = [
     id: 'tech-innovations-senior',
     title: 'Tech Lead',
     company: 'Some Big Tech Inc.',
-    companyUrl: 'https://techinnovations.com',
+    companyUrl: 'https://github.com/jrmhx/open-portfolio',
     location: 'San Francisco, CA',
     startDate: '2022-03',
     // endDate: undefined, // Current position
@@ -69,7 +69,7 @@ export const experienceData: Experience[] = [
     id: 'digital-solutions-fullstack',
     title: 'Software Engineer',
     company: 'Digital Solutions Co.',
-    companyUrl: 'https://digitalsolutions.co',
+    companyUrl: 'https://github.com/jrmhx/open-portfolio',
     location: 'San Francisco, CA',
     startDate: '2020-06',
     endDate: '2022-02',
@@ -102,7 +102,7 @@ export const experienceData: Experience[] = [
     id: 'startupxyz-frontend',
     title: 'AI Developer',
     company: 'StartupXYZ',
-    companyUrl: 'https://startupxyz.com',
+    companyUrl: 'https://github.com/jrmhx/open-portfolio',
     location: 'San Francisco, CA',
     startDate: '2019-01',
     endDate: '2020-05',
@@ -128,7 +128,7 @@ export const experienceData: Experience[] = [
         metrics: '50% improvement in loading times'
       }
     ],
-    technologies: ['React', 'JavaScript', 'SASS', 'Webpack', 'Jest'],
+    technologies: ['React', 'JavaScript', 'SasS', 'Webpack', 'Jest'],
     type: 'work'
   },
   {
@@ -154,7 +154,7 @@ export const experienceData: Experience[] = [
         metrics: 'Average 2-week MVP delivery'
       }
     ],
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Heroku'],
+    technologies: ['React', 'Node.js', 'MongoDB',],
     type: 'freelance'
   }
 ]

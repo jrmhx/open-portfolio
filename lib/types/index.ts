@@ -62,7 +62,6 @@ export interface Project {
   title: string
   description: string
   longDescription?: string
-  image?: string
   images?: string[] // multiple images for gallery
   technologies: string[]
   githubUrl?: string
