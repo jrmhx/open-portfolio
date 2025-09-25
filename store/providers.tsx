@@ -3,6 +3,7 @@
 import { Provider } from 'react-redux'
 import { store } from './index'
 import { ThemeProvider } from '@/components/providers/ThemeProvider'
+import { MobileDetectionProvider } from '@/components/providers/MobileDetectionProvider'
 
 export function StoreProvider({
   children
@@ -12,6 +13,7 @@ export function StoreProvider({
   return (
     <Provider store={store}>
       <ThemeProvider>
+        <MobileDetectionProvider />
         {children}
       </ThemeProvider>
     </Provider>

@@ -7,6 +7,7 @@ export interface UIState {
   scrollProgress: number
   isLoading: boolean
   showScrollToTop: boolean
+  isMobile: boolean
 }
 
 const initialState: UIState = {
@@ -15,7 +16,8 @@ const initialState: UIState = {
   activeSection: 'hero',
   scrollProgress: 0,
   isLoading: false,
-  showScrollToTop: false
+  showScrollToTop: false,
+  isMobile: false
 }
 
 export const uiSlice = createSlice({
@@ -43,6 +45,9 @@ export const uiSlice = createSlice({
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload
+    },
+    setIsMobile: (state, action: PayloadAction<boolean>) => {
+      state.isMobile = action.payload
     }
   }
 })
@@ -54,7 +59,8 @@ export const {
   toggleMobileMenu, 
   setActiveSection, 
   setScrollProgress, 
-  setLoading 
+  setLoading,
+  setIsMobile
 } = uiSlice.actions
 
 export default uiSlice.reducer
