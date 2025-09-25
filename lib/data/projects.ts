@@ -11,7 +11,7 @@ export const projectsData: Project[] = [
     Includes a companion AI-powered resume parser (separate Go project) that can automatically generate portfolio data from resumes.`,
   technologies: ['Next.js', 'TypeScript', 'Redux Toolkit', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion'],
   githubUrl: 'https://github.com/jrmhx/open-portfolio',
-  liveUrl: 'https://theopenportfolio.vercel.app',
+  liveUrl: 'https://i.jrmh.dev/',
   featured: true,
   category: 'Frontend',
   status: 'in-progress',
